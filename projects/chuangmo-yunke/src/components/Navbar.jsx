@@ -131,6 +131,24 @@ const Navbar = ({
             ))}
             <div className="pt-4 border-t border-gray-200 flex flex-col space-y-2">
               <button
+                onClick={() => {
+                  if (onGuideClick) onGuideClick();
+                  setMobileMenuOpen(false);
+                }}
+                className="text-gray-600 hover:bg-gray-50 px-3 py-2 rounded-lg text-sm font-medium transition-colors text-left flex items-center"
+              >
+                📚 教程
+              </button>
+              <button
+                onClick={() => {
+                  if (onPricingClick) onPricingClick();
+                  setMobileMenuOpen(false);
+                }}
+                className="text-gray-600 hover:bg-gray-50 px-3 py-2 rounded-lg text-sm font-medium transition-colors text-left flex items-center"
+              >
+                💎 会员
+              </button>
+              <button
                 onClick={onLoginClick}
                 className="text-gray-600 hover:bg-gray-50 px-3 py-2 rounded-lg text-sm font-medium transition-colors text-left"
               >
@@ -138,7 +156,7 @@ const Navbar = ({
               </button>
               <button
                 onClick={onLoginClick}
-                className="bg-blue-600 hover:bg-blue-700 text-white px-3 py-2 rounded-lg text-sm font-medium transition-colors"
+                className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white px-3 py-2 rounded-lg text-sm font-medium transition-colors text-center"
               >
                 注册
               </button>
