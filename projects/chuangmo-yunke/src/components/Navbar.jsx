@@ -3,7 +3,18 @@ import { Activity, ShoppingCart, Banknote, Users, Calculator, Menu, X } from 'lu
 
 const iconMap = { Activity, ShoppingCart, Banknote, Users, Calculator };
 
-const Navbar = ({ activeTab, setActiveTab, onLoginClick, mobileMenuOpen, setMobileMenuOpen }) => {
+const Navbar = ({ 
+  activeTab, 
+  setActiveTab, 
+  onLoginClick, 
+  onPricingClick, 
+  onGuideClick, 
+  onCopyrightClick,
+  onAboutClick,
+  onHomeClick,
+  mobileMenuOpen, 
+  setMobileMenuOpen 
+}) => {
   const navItems = [
     { id: 'generate', label: 'AI 生成', icon: Activity },
     { id: 'trading', label: '模型交易', icon: ShoppingCart },
@@ -51,7 +62,21 @@ const Navbar = ({ activeTab, setActiveTab, onLoginClick, mobileMenuOpen, setMobi
           </div>
 
           {/* Right Side */}
-          <div className="hidden lg:flex items-center space-x-4">
+          <div className="hidden lg:flex items-center space-x-3">
+            <button
+              onClick={onGuideClick}
+              className="text-gray-500 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors"
+              title="AI 生成指南"
+            >
+              📚 教程
+            </button>
+            <button
+              onClick={onPricingClick}
+              className="text-gray-500 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors"
+              title="会员套餐"
+            >
+              💎 会员
+            </button>
             <button
               onClick={onLoginClick}
               className="text-gray-500 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium transition-colors"
@@ -60,7 +85,7 @@ const Navbar = ({ activeTab, setActiveTab, onLoginClick, mobileMenuOpen, setMobi
             </button>
             <button
               onClick={onLoginClick}
-              className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm font-medium shadow-md transition-all transform hover:scale-105"
+              className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white px-4 py-2 rounded-lg text-sm font-medium shadow-md transition-all transform hover:scale-105"
             >
               注册
             </button>

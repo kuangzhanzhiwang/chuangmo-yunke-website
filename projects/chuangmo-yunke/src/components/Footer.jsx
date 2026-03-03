@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Footer = () => (
+const Footer = ({ onAboutClick, onPricingClick, onCopyrightClick }) => (
   <footer className="bg-slate-900 text-slate-400 py-12">
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
@@ -21,10 +21,11 @@ const Footer = () => (
         <div>
           <h3 className="text-white font-medium mb-4">支持与帮助</h3>
           <ul className="space-y-2 text-sm">
-            <li>帮助中心</li>
-            <li>版权说明</li>
-            <li>供应商入驻</li>
-            <li>API 文档</li>
+            <li className="cursor-pointer hover:text-blue-400" onClick={onAboutClick}>关于我们</li>
+            <li className="cursor-pointer hover:text-blue-400" onClick={onPricingClick}>会员套餐</li>
+            <li className="cursor-pointer hover:text-blue-400" onClick={onCopyrightClick}>版权保护</li>
+            <li className="cursor-pointer hover:text-blue-400">帮助中心</li>
+            <li className="cursor-pointer hover:text-blue-400">API 文档</li>
           </ul>
         </div>
         <div>
