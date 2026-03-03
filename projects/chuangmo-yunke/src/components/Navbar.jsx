@@ -12,6 +12,7 @@ const Navbar = ({
   onCopyrightClick,
   onAboutClick,
   onHomeClick,
+  setCurrentPage,
   mobileMenuOpen, 
   setMobileMenuOpen 
 }) => {
@@ -47,7 +48,10 @@ const Navbar = ({
               {navItems.map((item) => (
                 <button
                   key={item.id}
-                  onClick={() => setActiveTab(item.id)}
+                  onClick={() => {
+                    setActiveTab(item.id);
+                    if (setCurrentPage) setCurrentPage('home');
+                  }}
                   className={`${
                     activeTab === item.id 
                       ? 'border-blue-500 text-blue-600' 
@@ -112,6 +116,7 @@ const Navbar = ({
                 key={item.id}
                 onClick={() => {
                   setActiveTab(item.id);
+                  if (setCurrentPage) setCurrentPage('home');
                   setMobileMenuOpen(false);
                 }}
                 className={`${
