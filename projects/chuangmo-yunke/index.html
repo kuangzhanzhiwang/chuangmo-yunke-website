@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/favicon.svg" />
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#2563eb" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="创模云科" />
+    
+    <!-- SEO Meta -->
+    <meta name="description" content="创模云科 - 全球领先的 3D 模型生成与供应链平台。AI 图片转 3D 模型，3D 资产交易，需求悬赏，社区分享，一站式制造服务。" />
+    <meta name="keywords" content="3D 模型，AI 生成，3D 打印，模型交易，创模云科，3D 建模，图片转 3D" />
+    <meta name="author" content="创模云科" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://www.chuangmoyunke.com" />
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="创模云科 - 图片转 3D，灵感触手可及" />
+    <meta property="og:description" content="AI 驱动的 3D 模型生成与交易平台" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.chuangmoyunke.com" />
+    <meta property="og:image" content="https://www.chuangmoyunke.com/og-image.png" />
+    <meta property="og:site_name" content="创模云科" />
+    <meta property="og:locale" content="zh_CN" />
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="创模云科 - 图片转 3D，灵感触手可及" />
+    <meta name="twitter:description" content="AI 驱动的 3D 模型生成与交易平台" />
+    <meta name="twitter:image" content="https://www.chuangmoyunke.com/twitter-image.png" />
+    
+    <!-- Security Headers -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https:; frame-ancestors 'none';" />
+    <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+    <meta http-equiv="X-Frame-Options" content="DENY" />
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block" />
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
+    
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "创模云科",
+        "alternateName": "Creation Model Cloud Tech",
+        "url": "https://www.chuangmoyunke.com",
+        "description": "全球领先的 3D 模型生成与供应链平台",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://www.chuangmoyunke.com/search?q={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      }
+    </script>
+    
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "创模云科",
+        "url": "https://www.chuangmoyunke.com",
+        "logo": "https://www.chuangmoyunke.com/favicon.svg",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+86-400-888-9999",
+          "contactType": "customer service",
+          "areaServed": "CN",
+          "availableLanguage": ["Chinese", "English"]
+        },
+        "sameAs": [
+          "https://github.com/chuangmoyunke",
+          "https://weibo.com/chuangmoyunke"
+        ]
+      }
+    </script>
+    
+    <title>创模云科 - 图片转 3D，灵感触手可及</title>
+    
+    <!-- Preconnect to external domains -->
+    <link rel="preconnect" href="https://images.unsplash.com" />
+    <link rel="preconnect" href="https://api.chuangmoyunke.com" />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script>
+      // Service Worker Registration
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/sw.js')
+            .then(registration => {
+              console.log('SW registered:', registration.scope);
+            })
+            .catch(error => {
+              console.log('SW registration failed:', error);
+            });
+        });
+      }
+    </script>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
